@@ -1,2 +1,3 @@
 # Chu-Dinh-Cuong
-Kadai
+課題１ーテキスト
+課題２－ボタン
