@@ -1,9 +1,11 @@
-﻿using UnityEngine;
+﻿using UnityEngine.UI;
+using UnityEngine;
 
 public class BtEvent : MonoBehaviour {
 
     public void ClickEvent()
     {
-        Debug.Log(gameObject.name);
+        string btName = transform.GetComponentInChildren<Text>().text;
+        Debug.Log(btName);
     }
 }
