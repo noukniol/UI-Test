@@ -119,6 +119,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 894f8ff1b55e8a54c95e568aa2617ce7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buttonPrefab: {fileID: 0}
+  contentParent: {fileID: 0}
+  numButton: 10
 --- !u!114 &114521568295614658
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -178,7 +181,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 114450492727180758}
-        m_MethodName: ClickEvent
+        m_MethodName: LogName
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
