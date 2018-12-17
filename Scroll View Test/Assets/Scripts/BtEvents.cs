@@ -1,25 +1,28 @@
-﻿using UnityEngine.UI;
+﻿using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class BtEvent : MonoBehaviour {
+public class BtEvents : MonoBehaviour {
+
+    List<GameObject> btList = new List<GameObject>();
 
     [SerializeField]
     private GameObject buttonPrefab;
 
-    private Transform contentParent;
     private string nameBt;
     private Color color;
+    private Transform contentParent;
+
     private int num = 0;
-    //  色のボタン用
-    private void Start()
+    // Use this for initialization
+    void Start()
     {
         contentParent = GameObject.Find("Content").transform;
-        nameBt = transform.GetComponentInChildren<Text>().text;
         color = transform.GetComponent<Image>().color;
-        
+        nameBt = transform.GetComponentInChildren<Text>().text;
     }
-
-    public void ClickEvent()
+    public void AddEvent()
     {
         num++;
         GameObject bt = Instantiate(buttonPrefab);
@@ -29,12 +32,15 @@ public class BtEvent : MonoBehaviour {
         //  ボタンプレハブに色のボタンの属性を設定する
         bt.GetComponentInChildren<Text>().text = nameBt + num;
         bt.GetComponent<Image>().color = color;
+
+        btList.Add(bt);
     }
-   
-    // ボタンプレハブ用
-    public void LogName()
+    public void RemoveEvent()
     {
-        string btName = transform.GetComponentInChildren<Text>().text;
-        Debug.Log(btName);
+        if (btList.Count > 0)
+        {
+            Destroy(btList[0].gameObject);
+            btList.Remove(btList[0].gameObject);
+        }
     }
 }
