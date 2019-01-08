@@ -8,7 +8,7 @@ public class BtEvents : ItemBase {
     }
     public void EventClick()
     {
-        Info.instance.SetInfoPanel(true);
+        Info.instance.SetInfoPanel("Open");
         Info.instance.SetInfo(item);
     }
 }

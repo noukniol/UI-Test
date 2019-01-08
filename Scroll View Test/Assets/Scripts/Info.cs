@@ -1,18 +1,22 @@
-﻿
+﻿using UnityEngine;
+
 public class Info : ItemBase {
 
     static public Info instance;
+
+    [SerializeField]
+    private Animator anim;
 
     private void Start()
     {
         if (!instance)
             instance = this;
 
-        SetInfoPanel(false);
+        anim.Play("Close");
     }
-    public void SetInfoPanel(bool flg)
+    public void SetInfoPanel(string status)
     {
-        gameObject.SetActive(flg);
+        anim.Play(status);
     }
     public void SetInfo(Item item)
     {

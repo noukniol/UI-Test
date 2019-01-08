@@ -811,6 +811,7 @@ GameObject:
   - component: {fileID: 871167829}
   - component: {fileID: 871167828}
   - component: {fileID: 871167830}
+  - component: {fileID: 871167831}
   m_Layer: 5
   m_Name: Info Panel
   m_TagString: Untagged
@@ -887,6 +888,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 857ed84750c803b42a98a8021971e424, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  anim: {fileID: 871167831}
+--- !u!95 &871167831
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 871167826}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9a4ed303ededafc499740c459dc3649e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &1103725282
 Prefab:
   m_ObjectHideFlags: 0
@@ -1078,7 +1098,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1593621865}
   m_Direction: 0
   m_Value: 0
-  m_Size: 0.99999994
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -1505,7 +1525,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0.000022129918}
+  m_AnchoredPosition: {x: 0, y: -0.000008258202}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1594990994
@@ -2162,13 +2182,13 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 871167830}
         m_MethodName: SetInfoPanel
-        m_Mode: 6
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: Close
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,

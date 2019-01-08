@@ -7,7 +7,6 @@ public class Item : ScriptableObject
     public Sprite sprite;
     public string itemName;
     public string info;
-
 }
 
 public class ItemBase : MonoBehaviour
