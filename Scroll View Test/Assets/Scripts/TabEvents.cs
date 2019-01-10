@@ -12,7 +12,8 @@ public class TabEvents : MonoBehaviour {
 	void Start () {
         tabManager = GameObject.Find("Tab Manager").transform;
         tabBts = GameObject.Find("Tab Button").transform;
-	}
+        ClickEvent(0);
+    }
 	
 	public void ClickEvent(int no)
     {
@@ -22,6 +23,5 @@ public class TabEvents : MonoBehaviour {
             tabManager.GetChild(i).gameObject.SetActive(flg);
             tabBts.GetChild(i).GetComponent<Image>().color = flg ? pressedBtColor : Color.white;
         }
-        Debug.Log(name);
     }
 }
